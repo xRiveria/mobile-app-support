@@ -1,0 +1,35 @@
+name: App support
+description: Ask for help with Journey or Ledger
+title: "[Support] "
+body:
+  - type: markdown
+    attributes:
+      value: "This report is public. Do not include private financial records, bank details, home/work locations, API keys or passwords."
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      options:
+        - Journey
+        - Ledger
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version and iOS version
+      placeholder: App 1.0.1, iOS 26
+  - type: textarea
+    id: problem
+    attributes:
+      label: Question or problem
+      description: Describe what happened and how to reproduce it, using fictional examples.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public report
+      options:
+        - label: I have not included private records or credentials.
+          required: true
